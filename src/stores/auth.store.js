@@ -26,19 +26,48 @@ export const useAuthStore = defineStore({
             this.startRefreshTokenTimer();
 
         },
-        logout() {
+       
+        async logout() {
 
-            // 26-01-2026 - No need for calling the API in this simple demo which not revokes Refresh tokens
-            // fetchWrapper.post(`${baseUrl}/revoke-token`, {}, { credentials: 'include' });
+            try {
 
-            this.stopRefreshTokenTimer();
+                if (this.rToken) {
 
-            this.user = null;
-            this.rToken = null;
+                    await fetch(
+                        `${baseUrl}/logout`,
+                        {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(this.rToken)
+                        }
+                    );
 
-            router.push('/login');
+                    console.log(
+                        'Auth.store.js - Logout - Refresh token revoked by API'
+                    );
+                }
 
+            } catch (error) {
+
+                console.log(
+                    'Auth.store.js - Logout API call failed:',
+                    error
+                );
+
+            } finally {
+
+                this.stopRefreshTokenTimer();
+
+                this.user = null;
+                this.rToken = null;
+
+                router.push('/login');
+
+            }
         },
+        
         async refreshToken() {
             
             // 26-01-2026 - Calling a modified fectWrapper for RefreshToken

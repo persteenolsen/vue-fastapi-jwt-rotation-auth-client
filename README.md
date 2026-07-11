@@ -1,14 +1,14 @@
-# Vue 3 + Pinia JWT Authentication Client (FastAPI Integration)
+# 🔐 Vue 3 + Pinia JWT Authentication Client (FastAPI Integration)
 
-A Vue 3 frontend application demonstrating authentication using JWT access tokens and refresh token rotation
+A Vue 3 frontend application demonstrating authentication using JWT access tokens and refresh token rotation.
 
 This project is designed as a companion client for a FastAPI backend implementing JWT authentication with refresh token rotation.
 
-Last updated: 09-07-2026
+**Last updated:** 09-07-2026
 
 ---
 
-## Features
+## ✨ Features
 
 - User login with JWT authentication
 - Access token + refresh token handling
@@ -21,7 +21,7 @@ Last updated: 09-07-2026
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - Vue 3 (frontend framework)
 - Pinia (state management)
@@ -35,33 +35,33 @@ Last updated: 09-07-2026
 
 ---
 
-## Node Version Management (Volta)
+## 📦 Node Version Management (Volta)
 
 This project uses Volta to ensure consistent Node.js versions.
 
-### Install Node version
+### 📥 Install Node version
 
 volta install node@24
 
-### Pin project to Node version
+### 📌 Pin project to Node version
 
 volta pin node@24
 
-### List installed Node versions
+### 📋 List installed Node versions
 
 volta list node
 
 ---
 
-## Project Setup
+## 🚀 Project Setup
 
-### 1. Install dependencies
+### 1️⃣ Install dependencies
 
 npm install
 
 ---
 
-### 2. Start development server
+### 2️⃣ Start development server
 
 npm run dev
 
@@ -71,13 +71,13 @@ http://localhost:3000
 
 ---
 
-### 3. Build for production
+### 3️⃣ Build for production
 
 npm run build
 
 ---
 
-### 4. Preview production build locally
+### 4️⃣ Preview production build locally
 
 npm run preview
 
@@ -87,7 +87,7 @@ http://localhost:5050
 
 ---
 
-## Backend Integration (FastAPI)
+## 🔗 Backend Integration (FastAPI)
 
 This frontend is designed to work with a FastAPI backend that provides:
 
@@ -96,7 +96,7 @@ This frontend is designed to work with a FastAPI backend that provides:
 - Protected API routes
 - SPA authentication endpoints
 
-### Expected backend features:
+### ✅ Expected backend features
 
 - POST /token → login (access token)
 - POST /tokens-spa → login (access + refresh tokens)
@@ -105,7 +105,7 @@ This frontend is designed to work with a FastAPI backend that provides:
 
 ---
 
-## Authentication Flow
+## 🔄 Authentication Flow
 
 This client implements JWT authentication with refresh token rotation:
 
@@ -121,7 +121,7 @@ This client implements JWT authentication with refresh token rotation:
 
 ---
 
-## Security Notes
+## 🛡️ Security Notes
 
 - Access tokens are short-lived
 - Refresh tokens extend session without login
@@ -130,7 +130,7 @@ This client implements JWT authentication with refresh token rotation:
 
 ---
 
-## Development Notes
+## 💻 Development Notes
 
 - This project is intentionally kept simple to clearly demonstrate JWT authentication flow
 - Focus is on learning authentication concepts, not enterprise-level security architecture
@@ -138,7 +138,7 @@ This client implements JWT authentication with refresh token rotation:
 
 ---
 
-## Future Improvements
+## 🚧 Future Improvements
 
 - Store refresh token in HTTP-only cookies instead of client state
 - Implement automatic token refresh interceptor (Axios middleware)
@@ -151,7 +151,7 @@ This client implements JWT authentication with refresh token rotation:
 
 ---
 
-## Learning Purpose
+## 📚 Learning Purpose
 
 This project was built to explore:
 
@@ -163,7 +163,8 @@ This project was built to explore:
 
 ---
 
-## Author
+## 👤 Author
 
-Built by Per Olsen  
+Built by Per Olsen
+
 Frontend companion project for FastAPI JWT authentication system

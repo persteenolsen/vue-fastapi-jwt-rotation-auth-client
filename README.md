@@ -4,7 +4,7 @@ A Vue 3 frontend application demonstrating authentication using JWT access token
 
 This project is designed as a companion client for a FastAPI backend implementing JWT authentication with refresh token rotation.
 
-**Last updated:** 09-07-2026
+**Last updated:** 14-07-2026
 
 ---
 
